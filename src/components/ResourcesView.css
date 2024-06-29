@@ -1,0 +1,13 @@
+.ResourcesView {
+  width: 250px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ResourcesView {
+  border: 5px solid black;
+}
+
+.ResourcesView thead {
+  background-color: bisque;
+}

@@ -1,0 +1,77 @@
+.App header {
+  padding: 30px 10px;
+  margin-bottom: 50px;
+  background-color: bisque;
+}
+
+.App main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.App h2 {
+  font-size: 17px;
+}
+
+.App .lose-message {
+  position: fixed;
+  top: 300px;
+  padding: 50px;
+  font-size: 30px;
+  background-color: rgb(201, 39, 39);
+  color: rgb(253, 245, 235);
+  border: 2px solid black;
+  z-index: 2;
+}
+
+.App .win-message {
+  position: fixed;
+  top: 300px;
+  padding: 50px;
+  font-size: 30px;
+  background-color: rgb(9, 151, 7);
+  color: rgb(253, 245, 235);
+  border: 2px solid black;
+  z-index: 2;
+
+}
+
+.App .lose-message button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: aliceblue;
+  font-size: 16px;
+}
+
+.App .lose-message form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.App .win-message button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: aliceblue;
+  font-size: 16px;
+}
+
+.App .win-message form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+@media only screen and (min-width: 800px) {
+  .App main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

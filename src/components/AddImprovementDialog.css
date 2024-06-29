@@ -1,0 +1,63 @@
+@keyframes slideDown {
+  from {
+    transform: translate(50%, -50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(50%, 0);
+    opacity: 1;
+  }
+}
+
+.AddImprovementDialog {
+  position: absolute;
+  background-color: bisque;
+  border: 2px solid black;
+  width: 250px;
+  top: 275px;
+  right: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  animation: slideDown 0.5s ease-out forwards;
+  opacity: 0;
+  z-index: 1;
+}
+
+.AddImprovementDialog select {
+  margin: 5px 0;
+  padding: 2px 0;
+}
+
+.AddImprovementDialog button {
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.AddImprovementDialog p {
+  text-align: center;
+}
+
+@media only screen and (min-width: 800px) {
+  @keyframes slideRight1 {
+    from {
+      transform: translate(200%, -100%);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, -100%);
+      opacity: 1;
+    }
+  }
+
+  .AddImprovementDialog {
+    height: 480px;
+    top: 100%;
+    /* transform: translateY(-100%); */
+    left: 275px;
+    animation: slideRight1 0.5s ease-out forwards;
+    opacity: 0;
+  }
+}

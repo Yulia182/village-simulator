@@ -1,0 +1,56 @@
+@keyframes slideDown {
+  from {
+    transform: translate(50%, -50%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(50%, 0);
+    opacity: 1;
+  }
+}
+
+.EditImprovementDialog {
+  position: absolute;
+  background-color: bisque;
+  border: 2px solid black;
+  width: 250px;
+  top: 275px;
+  right: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  animation: slideDown 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.EditImprovementDialog button {
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.EditImprovementDialog p {
+  text-align: center;
+}
+
+@media only screen and (min-width: 800px) {
+  @keyframes slideRight2 {
+    from {
+      transform: translate(-400%, -100%);
+      opacity: 0;
+    }
+    to {
+      transform: translate(-220%, -100%);
+      opacity: 1;
+    }
+  }
+
+  .EditImprovementDialog {
+    height: 480px;
+    top: 100%;
+    left: 275px;
+    animation: slideRight2 0.5s ease-out forwards;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,38 @@
+.Tile {
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* position: relative; */
+}
+
+.Tile .image-container {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+
+.Tile img {
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Tile .level {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  background-color: aquamarine;
+  top: 50%;
+  left: 50%;
+  
+}
