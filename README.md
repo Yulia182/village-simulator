@@ -6,7 +6,15 @@ Village Simulator is a React application that allows users to build and manage a
 
 ## Features
 
-**Map:** A grid of cells where users can add improvements. **Resources Management:** Tracks the amount of each resource in stock. **Improvements:** Various improvements (Pyramid, Aqueduct, Sphinks, Market, Masonry) each with specific resource production and consumption. **Upgrading and Downgrading:** Improvements can be upgraded or downgraded to adjust resource management. **Interactive Dialogs:** Add or edit improvements through interactive forms.
+**Map:** A grid of cells where users can add improvements.
+
+**Resources Management:** Tracks the amount of each resource in stock.
+
+**Improvements:** Various improvements (Pyramid, Aqueduct, Sphinks, Market, Masonry) each with specific resource production and consumption.
+
+**Upgrading and Downgrading:** Improvements can be upgraded or downgraded to adjust resource management.
+
+**Interactive Dialogs:** Add or edit improvements through interactive forms.
 
 ## Contributors
 
