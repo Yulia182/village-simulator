@@ -1,4 +1,4 @@
-import { FormEvent } from "react";
+// import { FormEvent } from "react";
 import "./EditImprovementDialog.css";
 import { ImprovementsArray, Type } from "../models/ImprovementsArray";
 import Improvement from "../models/Improvement";
