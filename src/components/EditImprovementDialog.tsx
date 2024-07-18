@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { FormEvent } from "react";
 import "./EditImprovementDialog.css";
 import { ImprovementsArray, Type } from "../models/ImprovementsArray";
 import Improvement from "../models/Improvement";
@@ -8,7 +8,12 @@ interface Props {
   endTurn(): void;
   hideDialog(): void;
   editImprovement(index: number, improvement: Type, action: string): void;
-  checkImprovement(improvement: Type, which: string, level?: number, index?: number): boolean;
+  checkImprovement(
+    improvement: Type,
+    which: string,
+    level?: number,
+    index?: number
+  ): boolean;
   terrain: string;
 }
 
@@ -20,24 +25,41 @@ const EditImprovementDialog = ({
   checkImprovement,
   terrain,
 }: Props) => {
-  const submitListener = (e: FormEvent) => {
-    e.preventDefault();
-    endTurn();
-    hideDialog();
-  };
+  // const submitListener = (e: FormEvent) => {
+  //   e.preventDefault();
+  //   endTurn();
+  //   hideDialog();
+  // };
 
   const element: Type | undefined = ImprovementsArray.find((item) => {
     return item.type === improvement.type;
   });
   const cantUpgrade =
     improvement.level > 0
-      ? checkImprovement(element as Type, "add", improvement.level, improvement._id)
+      ? checkImprovement(
+          element as Type,
+          "add",
+          improvement.level,
+          improvement._id
+        )
       : true;
   const cantDowngrade =
-    improvement.level > 0 ? checkImprovement(element as Type, "down", improvement.level, improvement._id) : true;
+    improvement.level > 0
+      ? checkImprovement(
+          element as Type,
+          "down",
+          improvement.level,
+          improvement._id
+        )
+      : true;
   const cantRemove =
     improvement.level > 0
-      ? checkImprovement(element as Type, "remove", improvement.level, improvement._id)
+      ? checkImprovement(
+          element as Type,
+          "remove",
+          improvement.level,
+          improvement._id
+        )
       : true;
 
   // console.log(checkImprovement(element as Type, "add", improvement.level));

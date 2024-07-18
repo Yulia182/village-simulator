@@ -19,13 +19,7 @@ const Terrains = [
   "Sand Dunes",
 ];
 
-const Resources = [
-  "People",
-  "Papyrus",
-  "Fish",
-  "Bricks",
-  "Water"
-]
+const Resources = ["People", "Papyrus", "Fish", "Bricks", "Water"];
 
 function App() {
   const [people, setPeople] = useState<Resource>({ name: "People", amount: 5 });
@@ -34,11 +28,15 @@ function App() {
     amount: 10,
   });
   const [fish, setFish] = useState<Resource>({ name: "Fish", amount: 2 });
-  const [bricks, setBricks] = useState<Resource>({ name: "Bricks", amount: 10 });
+  const [bricks, setBricks] = useState<Resource>({
+    name: "Bricks",
+    amount: 10,
+  });
   const [water, setWater] = useState<Resource>({ name: "Water", amount: 10 });
 
   const [improvements, setImprovements] = useState<Improvement[]>(
     Array.apply(null, Array(25)).map((el, i) => {
+      console.log(el);
       return {
         _id: i,
         type: "empty",
@@ -238,12 +236,12 @@ function App() {
   //   })
   // }
   const checkWin = () => {
-    if(people.amount >= 20) {
+    if (people.amount >= 20) {
       return true;
-    }else {
+    } else {
       return false;
     }
-  }
+  };
 
   return (
     <>
@@ -252,7 +250,13 @@ function App() {
           <h1>Ancient Village Simulator</h1>
         </header>
         <main>
-          <AlienInvasion setResource={setResource} resourceAmount = {resourceAmount} resources={Resources} checkWin={checkWin} checkLose={checkLose}/>
+          <AlienInvasion
+            setResource={setResource}
+            resourceAmount={resourceAmount}
+            resources={Resources}
+            checkWin={checkWin}
+            checkLose={checkLose}
+          />
           <Rules />
           <ResourcesView
             people={people}
